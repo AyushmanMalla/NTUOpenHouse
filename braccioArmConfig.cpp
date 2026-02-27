@@ -17,7 +17,7 @@ void setup() {
   // 1. Initialize Braccio in Safety Position
   // M1=90, M2=45, M3=180, M4=180, M5=90, M6=10
   Braccio.begin();
-  Braccio.ServoMovement(30, 90, 45, 180, 180, 90, 73);
+  Braccio.ServoMovement(30, 180, 45, 0, 180, 90, 73);
   
   // 2. Start High-Speed Serial
   Serial.begin(115200);
@@ -89,7 +89,7 @@ void processCommand() {
 
   // EXECUTE MOVE
   // Step Delay 10 = Maximum Safe Speed
-  Braccio.ServoMovement(10, m1, m2, m3, m4, m5, m6);
+  Braccio.ServoMovement(30, m1, m2, m3, m4, m5, m6);
   
   // Acknowledge (Optional, might slow down loop if verbose)
   // Serial.println("OK"); 
