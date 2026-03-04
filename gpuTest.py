@@ -10,9 +10,10 @@ import serial
 MODEL_URL = "https://tfhub.dev/google/movenet/singlepose/thunder/4"
 INPUT_SIZE = 256 
 CONF_THRESH = 0.3
-SERIAL_PORT = "/dev/ttyACM0" 
+# SERIAL_PORT = "/dev/ttyACM0" 
+SERIAL_PORT = "/dev/tty.usbmodem31301"
 BAUD_RATE = 115200
-PARALLEL_THRESH = 60 
+PARALLEL_THRESH = 45 
 
 # --- EMA FILTER ---
 # Acts as a mathematical shock absorber for jittery CV data
